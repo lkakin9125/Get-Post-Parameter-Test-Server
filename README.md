@@ -27,3 +27,4 @@ npm install
 ```
 npm start
 ```
+4. when the console show "server start at port 3000" means the server is already start and listen to port 3000
