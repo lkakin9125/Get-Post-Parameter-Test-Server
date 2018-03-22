@@ -12,21 +12,22 @@ app.use(bodyParser.urlencoded({
 
 
 app.get('*', (req, res) => {
-    var query = req.query
+    var { query, headers } = req
+
     res.send(
         {
             ok: true,
-            response: JSON.stringify(query)
+            response: JSON.stringify({ query, headers })
         }
     )
 })
 
 app.post('*', (req, res) => {
-    var body = req.body
+    var { body, headers } = req
     res.send(
         {
             ok: true,
-            response: JSON.stringify(body)
+            response: JSON.stringify({ body, headers })
         }
     )
 })
